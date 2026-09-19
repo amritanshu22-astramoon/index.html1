@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Mom ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    color:#3c2930;
+
+    background:
+    radial-gradient(circle at 10% 10%,#ffe7df,transparent 30%),
+    radial-gradient(circle at 90% 20%,#f8dce6,transparent 30%),
+    linear-gradient(135deg,#fffaf5,#f9eef1);
+
+    min-height:100vh;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:100;
+
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(18px);
+
+    padding:10px;
+    border-radius:50px;
+
+    box-shadow:0 10px 40px rgba(60,30,40,.12);
+
+    display:flex;
+    gap:5px;
+}
+
+nav button{
+    border:none;
+    background:transparent;
+
+    padding:9px 16px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-family:"DM Sans";
+
+    color:#3c2930;
+}
+
+nav button:hover,
+nav button.active{
+    background:white;
+    color:#a85d70;
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:200;
+
+    border:none;
+
+    background:#3c2930;
+    color:white;
+
+    padding:13px 18px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+    font-weight:600;
+
+}
+
+
+/* =========================
+   PAGES
+========================= */
+
+.page{
+
+    display:none;
+
+    min-height:100vh;
+
+    padding:120px 7% 70px;
+
+}
+
+.page.active{
+
+    display:block;
+
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.small-title{
+
+    color:#a85d70;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-weight:600;
+
+}
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(65px,9vw,125px);
+
+    line-height:.85;
+
+    margin:20px 0;
+
+}
+
+h1 span{
+
+    color:#a85d70;
+
+}
+
+.description{
+
+    max-width:540px;
+
+    color:#7c646b;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.enter{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    background:#a85d70;
+
+    color:white;
+
+    padding:14px 22px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+}
+
+.hero-photo{
+
+    position:relative;
+
+}
+
+.hero-photo img{
+
+    width:100%;
+
+    max-height:650px;
+
+    object-fit:cover;
+
+    border-radius:200px 200px 35px 35px;
+
+    border:9px solid rgba(255,255,255,.8);
+
+    box-shadow:20px 25px 60px rgba(60,30,40,.2);
+
+}
+
+.hero-photo:after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:25px -20px -20px 20px;
+
+    border:1px solid #c99b55;
+
+    border-radius:200px 200px 35px 35px;
+
+    z-index:-1;
+
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+.title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(55px,8vw,90px);
+
+    margin:15px 0;
+
+}
+
+.subtitle{
+
+    color:#7c646b;
+
+}
+
+
+/* =========================
+   MEMORIES
+========================= */
+
+.gallery{
+
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 45px rgba(60,30,40,.12);
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+.card p{
+
+    padding:18px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:23px;
+
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+
+    max-width:800px;
+
+    margin:50px auto;
+
+    background:rgba(255,255,255,.8);
+
+    padding:55px;
+
+    border-radius:35px;
+
+    box-shadow:0 20px 60px rgba(60,30,40,.1);
+
+}
+
+.letter p{
+
+    color:#7c646b;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+.signature{
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:#a85d70;
+
+    font-size:32px;
+
+    margin-top:35px;
+
+}
+
+.final-photo{
+
+    display:block;
+
+    width:min(600px,100%);
+
+    margin:40px auto;
+
+    border-radius:35px;
+
+    box-shadow:0 20px 55px rgba(60,30,40,.16);
+
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote{
+
+    max-width:800px;
+
+    margin:70px auto;
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.7);
+
+}
+
+.quote p{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:30px;
+
+    line-height:1.4;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    text-align:center;
+
+    color:#9b7c83;
+
+    padding:30px;
+
+    font-size:13px;
+
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+.page.active{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
+
+    nav button{
+
+        padding:8px 10px;
+
+        font-size:11px;
+
+    }
+
+    .home{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+    h1{
+
+        font-size:65px;
+
+    }
+
+    .hero-photo{
+
+        width:90%;
+
+        margin:auto;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .card img{
+
+        height:400px;
+
+    }
+
+    .letter{
+
+        padding:30px;
+
+    }
+
+}
+
+
+/* =========================
+   FALLBACK IMAGE STYLE
+========================= */
+
+img{
+
+    background:#f3dfe5;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     NAVIGATION
+===================================== -->
+
+<nav>
+
+<button class="active" onclick="showPage('home',this)">
+Home
+</button>
+
+<button onclick="showPage('memories',this)">
+Memories
+</button>
+
+<button onclick="showPage('letter',this)">
+A Letter
+</button>
+
+</nav>
+
+
+
+<!-- =====================================
+     MUSIC
+===================================== -->
+
+<audio id="song" loop>
+
+<!--
+PUT YOUR SONG FILE IN THE SAME GITHUB
+REPOSITORY AS:
+
+birthday-song.mp3
+
+If it is in the root of the repository,
+this will work automatically.
+-->
+
+<source src="birthday-song.mp3" type="audio/mpeg">
+
+</audio>
+
+
+<button class="music" onclick="toggleMusic()">
+
+<span id="musicIcon">♪</span>
+
+<span id="musicText">
+Play Music
+</span>
+
+</button>
+
+
+
+<!-- =====================================
+     HOME PAGE
+===================================== -->
+
+<section id="home" class="page active">
+
+<div class="home">
+
+
+<div>
+
+<div class="small-title">
+
+A little corner of the internet,
+made with love
+
+</div>
+
+
+<h1>
+
+Happy
+
+<br>
+
+<span>
+Birthday, Mom.
+</span>
+
+</h1>
+
+
+<p class="description">
+
+For the woman whose love has quietly
+been behind so many of my smiles,
+my memories, and my dreams.
+
+</p>
+
+
+<a
+class="enter"
+onclick="showPage('memories')">
+
+Open Our Memories →
+
+</a>
+
+</div>
+
+
+
+<div class="hero-photo">
+
+<!-- PHOTO 2 -->
+
+<img
+src="photo2.png"
+alt="Mom">
+
+</div>
+
+
+</div>
+
+
+
+<div class="quote">
+
+<p>
+
+"Some people make a house feel warm.
+You make every place feel like home."
+
+</p>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================
+     MEMORIES PAGE
+===================================== -->
+
+<section id="memories" class="page">
+
+<div class="container">
+
+
+<div class="center">
+
+<div class="small-title">
+
+Little moments, forever kept
+
+</div>
+
+<h2 class="title">
+
+Our Memories
+
+</h2>
+
+<p class="subtitle">
+
+Four photographs.
+A thousand feelings.
+
+</p>
+
+</div>
+
+
+
+<div class="gallery">
+
+
+<div class="card">
+
+<img
+src="photo1.png"
+alt="Mom and Dad">
+
+<p>
+Where the story began.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+src="photo2.png"
+alt="Mom">
+
+<p>
+Beautiful, just being you.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+src="photo3.png"
+alt="Family">
+
+<p>
+Some of my favourite smiles.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<img
+src="photo4.png"
+alt="Mom">
+
+<p>
+Grace in every little moment.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<div class="quote">
+
+<p>
+
+"The older I get, the more I understand
+how much of the good in me began with you."
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================
+     LETTER PAGE
+===================================== -->
+
+<section id="letter" class="page">
+
+<div class="container">
+
+
+<div class="center">
+
+<div class="small-title">
+
+A few words I wanted to say
+
+</div>
+
+<h2 class="title">
+
+Dear Mom,
+
+</h2>
+
+</div>
+
+
+
+<div class="letter">
+
+
+<p>
+
+Happy Birthday to the most important
+woman in my life.
+
+</p>
+
+
+<p>
+
+I know I don't always say it as often
+as I should, but I notice the little
+things you do.
+
+</p>
+
+
+<p>
+
+The care, the patience, the countless
+small sacrifices, and the way you somehow
+manage to make ordinary days feel special.
+
+</p>
+
+
+<p>
+
+When I look back at my life, so many
+of my favourite memories have you
+somewhere in them.
+
+</p>
+
+
+<p>
+
+And when I think about the future,
+one of the biggest things I want is
+to make you proud and give you
+reasons to smile.
+
+</p>
+
+
+<p>
+
+Thank you for believing in me even
+when I doubt myself.
+
+</p>
+
+
+<p>
+
+Thank you for being there through
+every difficult day and every happy one.
+
+</p>
+
+
+<p>
+
+Whatever I become, a part of it will
+always belong to you.
+
+</p>
+
+
+<p>
+
+Today, I just want you to know that
+you are loved more than these few
+words can ever explain.
+
+</p>
+
+
+<p>
+
+May this year bring you good health,
+peaceful days, beautiful surprises,
+and all the happiness you deserve.
+
+</p>
+
+
+<div class="signature">
+
+Happy Birthday, Mom. ❤️
+
+<br>
+
+— Your Son
+
+</div>
+
+
+</div>
+
+
+
+<!-- PHOTO 4 -->
+
+<img
+class="final-photo"
+src="photo4.png"
+alt="Mom">
+
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+Made especially for Mom ·
+With all my love ❤️
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   PAGE SWITCHING
+========================= */
+
+function showPage(pageName,button){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(page => {
+
+        page.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById(pageName)
+    .classList.add("active");
+
+
+    document
+    .querySelectorAll("nav button")
+    .forEach(btn => {
+
+        btn.classList.remove("active");
+
+    });
+
+
+    if(button){
+
+        button.classList.add("active");
+
+    }
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+const song =
+document.getElementById("song");
+
+let playing=false;
+
+
+async function toggleMusic(){
+
+    try{
+
+        if(!playing){
+
+            await song.play();
+
+            playing=true;
+
+            document
+            .getElementById("musicIcon")
+            .textContent="Ⅱ";
+
+            document
+            .getElementById("musicText")
+            .textContent="Pause Music";
+
+        }
+
+        else{
+
+            song.pause();
+
+            playing=false;
+
+            document
+            .getElementById("musicIcon")
+            .textContent="♪";
+
+            document
+            .getElementById("musicText")
+            .textContent="Play Music";
+
+        }
+
+    }
+
+    catch(error){
+
+        alert(
+            "Music file not found. Make sure birthday-song.mp3 is uploaded beside index.html."
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
